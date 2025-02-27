@@ -1,0 +1,139 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content {
+    margin-top: 5vh;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 25% auto 15%;
+    grid-template-areas:
+        "menu catalog advertisement"
+        "menu catalog advertisement"
+        "menu catalog ."
+        "menu order order";
+
+    row-gap: 1rem;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: lightskyblue;
+}
+
+.catalog {
+    grid-area: catalog;
+    background-color: lightgreen;
+}
+
+.advertisement {
+    grid-area: advertisement;
+    background-color: palevioletred;
+}
+
+.order {
+    grid-area: order;
+    background-color: cadetblue;
+}
+
+.box {
+    margin-top: 18px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid indianred;
+
+    overflow: visible clip;
+    /*overflow: hidden; */
+    /*js*/
+ }
+
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 80px;
+    font-size: 30px;
+}
+.item-grid {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+}
+
+.box1 {
+    background-color: indigo;
+    opacity: 1;
+}
+.box2 {
+    background-color: chartreuse;
+    opacity: 0.5;
+}
+
+.box3 {
+    background-color: darkcyan;
+    opacity: 0;
+}
+
+.box4 {
+    background-color: sandybrown;
+}
+
+.clickbtn{
+    margin-top: 30px;
+}
+
+.box4 button{
+    margin-top: 18px;
+    height: 35px;
+    padding-inline: 15px;
+    color: yellow;
+    font: inherit;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+
+    /*opacity: 1;*/
+    /*запретить взаимодействие*/
+    visibility: visible;
+}
+
+.box4 button:active {
+    background-color: lightblue;
+}
+
+.img {
+    cursor: url('cat.png'), auto;
+    margin-bottom: 50px;
+}
+
+.img .img1 {
+    margin-top: 50px;
+    clip-path: circle(180px);
+}
+
+.img .img2 {
+    margin-top: 50px;
+    clip-path: ellipse(50% 50%);
+}
+
+.img .img3 {
+    margin-top: 50px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+.text1 .txt1, button {
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+.a1 {
+    height: 35px;
+    padding-inline: 15px;
+    color: yellow;
+    font: inherit;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+}
