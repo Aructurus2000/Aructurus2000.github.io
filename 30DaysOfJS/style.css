@@ -1,10 +1,54 @@
+@keyframes move-to-right {
+    50% {
+        rotate: 45deg;
+    }
+
+    100% {
+        translate: 75vw;
+    }
+}
 
 html {
     scroll-behavior: smooth;
 }
 
+.box-animation {
+    margin-top: 3vh;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+
+    /*animation: move-to-right 2s;*/
+
+    /*имя анимации*/
+    animation-name: move-to-right;
+    /*длительность анимации*/
+    animation-duration: 2s;
+    /*задержка перед началом выполнения анимации*/
+    animation-delay: 0.5s;
+    /*количество выполнений*/
+    animation-iteration-count: 6;
+    /*функция скорости анимации*/
+        /*animation-timing-function: ease;*/
+        /*animation-timing-function: ease-in;*/
+        /*animation-timing-function: ease-out;*/
+        /*animation-timing-function: ease-in-out;*/
+        /*animation-timing-function: linear;*/
+    /*animation-timing-function: cubic-bezier(2, 1, 0, 1);*/
+    /*должна ли анимация выполняться в обратном порядке*/
+    animation-direction: alternate;
+}
+.box-animation:hover {
+    /*поставить анимацию на паузу*/
+    animation-play-state: paused;
+}
+
 .content {
-    margin-top: 5vh;
+    margin-top: 3vh;
     min-height: 50vh;
     display: grid;
     grid-template-columns: 25% auto 15%;
@@ -131,13 +175,10 @@ html {
 }
 
 .a1 {
-    height: 35px;
-    padding-inline: 15px;
-    color: yellow;
     font: inherit;
     background-color: blueviolet;
-    border: none;
-    border-radius: 5px;
+    color: white;
+    text-decoration: none;
 }
 
 .transform {
